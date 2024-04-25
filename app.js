@@ -1,51 +1,26 @@
-let body=document.getElementById("randomContainer")
-let couples=[
-    {
-        boy: "Rama",
-        girl:"Sita"
-    },
-    {
-        boy: "Krishna",
-        girl:"Radha"
-    },
-    {
-        boy: "Siva",
-        girl:"Paru"
-    },
-    {
-        boy: "Vishnu",
-        girl:"Lakshmi"
-    },
-    {
-        boy: "Vijay",
-        girl:"Yashu"
-    },
-    {
-        boy: "Raghu",
-        girl:"Priya"
+let main=document.getElementById("vote validation")
+// let age=document.getElementById("input-value").value
+// if(a<=18){
+//     console.log(you are eligible to vote);
+// }
+// else(a>18){
+//     console.log("Your are not eligible to vote");
+// }
+function show() {
+    let error = document.getElementById("para")
+    let age = document.getElementById("input-value").value
+    if (age >= 18) {
+        error.innerHTML="you are eligible to vote"
+        para.style.color="green"
     }
-]
-
-
-// let randomCouple=Math.floor(Math.random()*couples.length)
-// let men=document.getElementById("Male")
-// men.innerHTML= couples[randomCouple].boy
-// console.log(couples[randomCouple].boy)
-
-// let women=document.getElementById("Female")
-// women.innerHTML=couples[randomCouple].girl
-// console.log(couples[randomCouple].girl)
-
-
-function show(){
-    let randomCouple=Math.floor(Math.random()*couples.length)
-    let men=document.getElementById("Male")
-    men.innerHTML= couples[randomCouple].boy
-    // console.log(couples[randomCouple].boy)
+    else if (age==""){
+        error.innerHTML =  "arey stupid fellow enter the age"
+        para.style.color="yellow"
+        
+    }
     
-    let women=document.getElementById("Female")
-    women.innerHTML=couples[randomCouple].girl
-    // console.log(couples[randomCouple].girl)
-    
+    else{
+        error.innerHTML="Your are not eligible to vote"
+        para.style.color="red"
+    }
 }
-
